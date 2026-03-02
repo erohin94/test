@@ -50,6 +50,15 @@ ENTRYPOINT ["python", "pipeline.py"]
 <img width="883" height="71" alt="image" src="https://github.com/user-attachments/assets/8aa2ef27-108c-4ead-af16-74b841860a41" />
 
 `docker run -it --entrypoint=bash --rm test:pandas` Когда использую эту команду, то по заверншению работы с контейнером, все файлы удалятся. Видно, что находимся в каталоге /app который указали выше в докер файле.
+И когда выполняю `ls` то видим файл pipline.py который сохранили.
 
-<img width="372" height="40" alt="image" src="https://github.com/user-attachments/assets/5faabc3c-cd7e-4f08-938a-5de36cb7242b" />
+<img width="376" height="51" alt="image" src="https://github.com/user-attachments/assets/0e61d0e3-8e9a-4da1-8f3a-f57157130fe8" />
+
+Запустили `python pipeline.py 12`
+
+<img width="402" height="120" alt="image" src="https://github.com/user-attachments/assets/ab7d3f9f-9cd9-4685-b7e6-3c74a5c6b21e" />
+
+
+<img width="402" height="120" alt="image" src="https://github.com/user-attachments/assets/9c4a8242-c8db-4805-81f6-a57f864b29a6" />
+
 
