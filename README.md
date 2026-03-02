@@ -63,7 +63,7 @@ ENTRYPOINT ["python", "pipeline.py"]
 `--entrypoint=bash` — переопределяет `ENTRYPOINT` из `Dockerfile`
 (вместо `python pipeline.py` запускается bash)
 
-`--rm` — контейнер удалится автоматически, когда ты выйдешь
+`--rm` — контейнер удалится автоматически, файл исчезнет, когда ты выйдешь
 
 `test:pandas` — образ
 
@@ -75,5 +75,18 @@ ENTRYPOINT ["python", "pipeline.py"]
 
 <img width="458" height="154" alt="image" src="https://github.com/user-attachments/assets/38f925f7-9299-4cb9-a7e6-43bb566121e7" />
 
+Теперь можно выйти из контейнера `exit`
 
+<img width="220" height="51" alt="image" src="https://github.com/user-attachments/assets/b91ba281-2e34-42f4-977b-de8e7320b449" />
 
+Посмотерть список всех запущенных контейнеров: `docker ps` - покажет контейнеры, которые сейчас работают.
+
+Список всех контейнеров (включая остановленные): `docker ps -a`
+
+Увидим контейнеры которые сосздали ранее выполняя команду `docker run` два раза.
+
+<img width="923" height="126" alt="image" src="https://github.com/user-attachments/assets/e08d2a18-6d02-4e78-8201-50d213f07c01" />
+
+Удалим контенеры: `docker rm <container_id или имя>`
+
+<img width="924" height="189" alt="image" src="https://github.com/user-attachments/assets/01dfaf6f-a215-41d0-b103-bf562dc1cf90" />
