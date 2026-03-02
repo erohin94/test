@@ -49,16 +49,29 @@ ENTRYPOINT ["python", "pipeline.py"]
 
 <img width="883" height="71" alt="image" src="https://github.com/user-attachments/assets/8aa2ef27-108c-4ead-af16-74b841860a41" />
 
-`docker run -it --entrypoint=bash --rm test:pandas` Когда использую эту команду, то по заверншению работы с контейнером, все файлы удалятся. Видно, что находимся в каталоге /app который указали выше в докер файле.
+`docker run -it --entrypoint=bash --rm test:pandas`
+
+Когда использую эту команду, то по заверншению работы с контейнером, все файлы удалятся. Видно, что находимся в каталоге /app который указали выше в докер файле.
 И когда выполняю `ls` то видим файл pipline.py который сохранили.
+
+Что здесь происходит:
+
+`docker run` — создаёт новый контейнер
+
+`-it` — интерактивный режим (можно вводить команды)
+
+`--entrypoint=bash` — переопределяет `ENTRYPOINT` из `Dockerfile`
+(вместо `python pipeline.py` запускается bash)
+
+`--rm` — контейнер удалится автоматически, когда ты выйдешь
+
+`test:pandas` — образ
 
 <img width="376" height="51" alt="image" src="https://github.com/user-attachments/assets/0e61d0e3-8e9a-4da1-8f3a-f57157130fe8" />
 
-Запустили `python pipeline.py 12`
+Запустили `python pipeline.py 12`. Скрипт отработал и создал файл внутри контейнера.
 
-<img width="402" height="120" alt="image" src="https://github.com/user-attachments/assets/ab7d3f9f-9cd9-4685-b7e6-3c74a5c6b21e" />
+<img width="458" height="154" alt="image" src="https://github.com/user-attachments/assets/38f925f7-9299-4cb9-a7e6-43bb566121e7" />
 
-
-<img width="402" height="120" alt="image" src="https://github.com/user-attachments/assets/9c4a8242-c8db-4805-81f6-a57f864b29a6" />
 
 
