@@ -90,3 +90,9 @@ ENTRYPOINT ["python", "pipeline.py"]
 Удалим контенеры: `docker rm <container_id или имя>`
 
 <img width="924" height="189" alt="image" src="https://github.com/user-attachments/assets/01dfaf6f-a215-41d0-b103-bf562dc1cf90" />
+
+Если запустить сборку еще раз то увидим `CACHED`, это значит что команды не будут выполняться плвторно. Докер воспользуется тем что уже было выполнено. Это экономит время.
+
+<img width="910" height="305" alt="image" src="https://github.com/user-attachments/assets/59d0cc06-557a-490a-a9fb-c5d7f8202ca5" />
+
+49:00
