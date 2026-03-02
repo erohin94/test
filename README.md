@@ -51,3 +51,5 @@ ENTRYPOINT ["python", "pipeline.py"]
 
 `docker run -it --entrypoint=bash --rm test:pandas` Когда использую эту команду, то по заверншению работы с контейнером, все файлы удалятся. Видно, что находимся в каталоге /app который указали выше в докер файле.
 
+<img width="372" height="40" alt="image" src="https://github.com/user-attachments/assets/5faabc3c-cd7e-4f08-938a-5de36cb7242b" />
+
