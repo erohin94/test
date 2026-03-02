@@ -52,7 +52,7 @@ ENTRYPOINT ["python", "pipeline.py"]
 `docker run -it --entrypoint=bash --rm test:pandas`
 
 Когда использую эту команду, то по заверншению работы с контейнером, все файлы удалятся. Видно, что находимся в каталоге /app который указали выше в докер файле.
-И когда выполняю `ls` то видим файл pipline.py который сохранили.
+И когда выполняю `ls` то видим файл pipline.py который сохранили. Но файла parquet ещё нет, потому что не запускали скрипт.
 
 Что здесь происходит:
 
@@ -67,9 +67,11 @@ ENTRYPOINT ["python", "pipeline.py"]
 
 `test:pandas` — образ
 
+Тоесть мы оказались внутри контейнера:`root@<container_id>:/app#`
+
 <img width="376" height="51" alt="image" src="https://github.com/user-attachments/assets/0e61d0e3-8e9a-4da1-8f3a-f57157130fe8" />
 
-Запустили `python pipeline.py 12`. Скрипт отработал и создал файл внутри контейнера.
+Чтобы увидеть parquet файл, внутри контейнера надо выполнить: `python pipeline.py 12`. Скрипт отработал и создал файл внутри контейнера.
 
 <img width="458" height="154" alt="image" src="https://github.com/user-attachments/assets/38f925f7-9299-4cb9-a7e6-43bb566121e7" />
 
