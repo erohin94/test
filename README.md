@@ -128,9 +128,17 @@ ENTRYPOINT ["python", "pipeline.py"]
 
 `docker run -it --rm --entrypoint=bash test:pandas`
 
-Находимся в контйнере, вводим: `ls`, `uv`
+Находимся в контйнере, вводим: `ls`, `uv`. Видим что uv есть.
 
 <img width="485" height="167" alt="image" src="https://github.com/user-attachments/assets/b9d79c7e-2a2f-4ce3-bf2d-16bc3a82677e" />
 
-При указании в докер файле: `RUN uv sync --locked` мы устанавливаем те зависимости которые есть в этом lock файле. Это важно, чтобы те зависимости которые у нас есть локально, были так же в виртуальной среде.
+При указании в докер файле: `RUN uv sync --locked` мы запускаем uv с синхронизацией и устанавливаем те зависимости которые есть в этом lock файле. Это важно, чтобы те зависимости которые у нас есть локально, были так же в виртуальной среде.
+
+Запускаем и проверяем что все работает:
+
+<img width="446" height="152" alt="image" src="https://github.com/user-attachments/assets/157ee060-dd33-4cb4-bfcd-5da5b5696e5e" />
+
+Выхожу из контейнера: `exit`
+
+# Запуск PostgreSQL в Docker
 
